@@ -2,6 +2,8 @@
 
 The following table lists the default keybindings for various actions within the application. These can be changed using the keybindings command.
 
+Note: It supports mouse too. Left Click Draw, Right Click Erase.
+
 |     |     |     |
 | --- | --- | --- |
 | Action | Default Key | Description |
