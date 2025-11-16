@@ -23,7 +23,7 @@ Before you begin, you need to have the Rust programming language toolchain insta
 
 Open your terminal (or Command Prompt on Windows) and run the following command:
 
-codeSh
+
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -39,7 +39,7 @@ Once you have Rust and Cargo installed, compiling the project is straightforward
 
 If you have the project files in a Git repository, clone it to your local machine:
 
-codeSh
+
 
 ```
 git clone <repository-url>
@@ -51,7 +51,7 @@ If you just have the source code files, make sure you are in the root directory 
 
 To compile the project, use the cargo build command. For an optimized release version (which is recommended for regular use), use the --release flag:
 
-codeSh
+
 
 ```
 cargo build --release
@@ -71,7 +71,7 @@ On most Linux distributions, you will need to have the build-essential package
 
 - **On Debian-based systems (like Ubuntu):**
 
-codeSh
+
 
 ```
 sudo apt update
@@ -79,7 +79,7 @@ sudo apt install build-essential libssl-dev pkg-config
 ```
 - **On Fedora/CentOS/RHEL:**
 
-codeSh
+
 
 ```
 sudo dnf groupinstall "Development Tools"
@@ -87,7 +87,7 @@ sudo dnf install openssl-devel pkg-config
 ```
 - **On Arch Linux:**
 
-codeSh
+
 
 ```
 sudo pacman -S base-devel openssl pkg-config
@@ -105,7 +105,7 @@ To compile Rust projects on Windows, you need the Microsoft C++ (MSVC) build too
 
 Once the build tools are in place, you can compile the project from the Command Prompt or PowerShell:
 
-codeSh
+
 
 <br>
 
@@ -122,7 +122,7 @@ On macOS, you will need the **Xcode Command Line Tools**.
 1. **Open the Terminal** (you can find it in /Applications/Utilities/).
 2. Run the following command to install the tools:
 
-codeSh
+
 
 ```
 xcode-select --install
@@ -131,7 +131,7 @@ xcode-select --install
 
 With the Xcode Command Line Tools installed, you can now compile the project:
 
-codeSh
+
 
 <br>
 
@@ -147,7 +147,7 @@ After a successful compilation, you can run the application using the following 
 
 - **On Linux and macOS:**
 
-codeSh
+
 
 ```
 ./target/release/<executable_name>
@@ -156,7 +156,7 @@ codeSh
 _(Replace <executable\_name> with the actual name of the executable file, which is typically the name of the project)._
 - **On Windows:**
 
-codeSh
+
 
 ```
 .\target\release\<executable_name>.exe
@@ -164,7 +164,7 @@ codeSh
 
 Alternatively, you can use cargo to compile and run the application in one step:
 
-codeSh
+
 
 <br>
 
