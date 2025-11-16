@@ -1,5 +1,181 @@
 
-Pixel art app in terminal                                                                                    
+## Pixel art app in terminal                                                                                    
+
+You can launch it in 2 ways:
+Download the release
+Compile from source
+
+## Download the release (Windows)
+
+https://github.com/verlorengest/consolet/releases/download/1.0.0/consolet.exe
+Open the program by double-clicking on it quickly in windows.
+or
+Right-click and open the context menu, click the Open button.
+
+
+## Compile from source
+
+## 1\. Prerequisites
+
+Before you begin, you need to have the Rust programming language toolchain installed on your system. The primary way to do this is by using rustup, which is the official Rust installer and version manager.
+
+- **To install Rust:**
+
+Open your terminal (or Command Prompt on Windows) and run the following command:
+
+codeSh
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+This command will download and execute a script that installs rustc (the Rust compiler), cargo (the Rust package manager and build tool), and other necessary tools. Follow the on-screen instructions to complete the installation.
+
+## 2\. Compiling the Project
+
+Once you have Rust and Cargo installed, compiling the project is straightforward on all supported platforms.
+
+1. **Clone the Repository (if you haven't already):**
+
+If you have the project files in a Git repository, clone it to your local machine:
+
+codeSh
+
+```
+git clone <repository-url>
+cd <repository-directory>
+```
+
+If you just have the source code files, make sure you are in the root directory of the project (the one containing the Cargo.toml file).
+2. **Build the Project:**
+
+To compile the project, use the cargo build command. For an optimized release version (which is recommended for regular use), use the --release flag:
+
+codeSh
+
+```
+cargo build --release
+```
+
+Cargo will automatically download and compile all the necessary dependencies.
+
+The executable file will be located in the target/release/ directory.
+
+## 3\. Platform-Specific Build Requirements
+
+While cargo handles most of the heavy lifting, each operating system has some specific requirements to compile Rust applications, especially those with dependencies that might link to system libraries.
+
+### Linux
+
+On most Linux distributions, you will need to have the build-essential package or its equivalent installed, which includes gcc and other necessary build tools. Some dependencies might also require development headers for certain libraries.
+
+- **On Debian-based systems (like Ubuntu):**
+
+codeSh
+
+```
+sudo apt update
+sudo apt install build-essential libssl-dev pkg-config
+```
+- **On Fedora/CentOS/RHEL:**
+
+codeSh
+
+```
+sudo dnf groupinstall "Development Tools"
+sudo dnf install openssl-devel pkg-config
+```
+- **On Arch Linux:**
+
+codeSh
+
+```
+sudo pacman -S base-devel openssl pkg-config
+```
+
+After installing these prerequisites, you can proceed with the cargo build --release command.
+
+### Windows
+
+To compile Rust projects on Windows, you need the Microsoft C++ (MSVC) build tools. The rustup installer for Windows will help you set this up.
+
+1. **Run the rustup-init.exe installer.** If you haven't installed Rust yet, download it from the official [Rust website](https://www.google.com/url?sa=E&q=https%3A%2F%2Fwww.rust-lang.org%2Ftools%2Finstall).
+2. During the installation, when prompted, choose to install the **MSVC build tools**. rustup will guide you through the Visual Studio Installer process.
+3. If you already have Rust installed but are missing the build tools, you can install them separately. Open the **Visual Studio Installer** (which can be downloaded from the [Visual Studio website](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvisualstudio.microsoft.com%2Fvisual-cpp-build-tools%2F)) and make sure the "Desktop development with C++" workload is selected and installed.
+
+Once the build tools are in place, you can compile the project from the Command Prompt or PowerShell:
+
+codeSh
+
+<br>
+
+<br>
+
+```
+cargo build --release
+```
+
+### macOS
+
+On macOS, you will need the **Xcode Command Line Tools**.
+
+1. **Open the Terminal** (you can find it in /Applications/Utilities/).
+2. Run the following command to install the tools:
+
+codeSh
+
+```
+xcode-select --install
+```
+3. A dialog box will appear asking you to install the tools. Click "Install" and agree to the terms and conditions.
+
+With the Xcode Command Line Tools installed, you can now compile the project:
+
+codeSh
+
+<br>
+
+<br>
+
+```
+cargo build --release
+```
+
+## 4\. Running the Application
+
+After a successful compilation, you can run the application using the following commands:
+
+- **On Linux and macOS:**
+
+codeSh
+
+```
+./target/release/<executable_name>
+```
+
+_(Replace <executable\_name> with the actual name of the executable file, which is typically the name of the project)._
+- **On Windows:**
+
+codeSh
+
+```
+.\target\release\<executable_name>.exe
+```
+
+Alternatively, you can use cargo to compile and run the application in one step:
+
+codeSh
+
+<br>
+
+<br>
+
+```
+cargo run --release
+```
+
+<br>
+
 
 
 ## Default Keybindings
